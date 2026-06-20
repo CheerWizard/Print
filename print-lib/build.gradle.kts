@@ -20,9 +20,21 @@ signing {
     }
 }
 
+tasks.withType<Jar>().configureEach {
+    if (name == "jvmJavadocJar") {
+        // empty javadoc jar is accepted by Maven Central for KMP
+        archiveClassifier.set("javadoc")
+    }
+}
+
+val javadocJar by tasks.registering(Jar::class) {
+    archiveClassifier.set("javadoc")
+}
+
 // Publishing
 publishing {
     publications.withType<MavenPublication> {
+        artifact(javadocJar)
         pom {
             name.set("Print")
             description.set("A simple cross platform logging library for KMP projects")
@@ -83,7 +95,9 @@ android {
 
 kotlin {
     androidTarget()
-    jvm("jvm")
+    jvm("jvm") {
+        withJava()
+    }
     js(IR) {
         browser {
             binaries.library()
