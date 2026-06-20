@@ -104,6 +104,11 @@ kotlin {
         publishLibraryVariants("release")
     }
 
+    compilerOptions {
+        freeCompilerArgs.add("-Xcontext-parameters")
+        freeCompilerArgs.add("-Xexpect-actual-classes")
+    }
+
     sourceSets {
         val commonMain by getting {
             dependencies {
@@ -174,7 +179,7 @@ kotlin {
             dependencies {
                 implementation(libs.ktor.client.darwin)
             }
-            dependsOn(posixMain)
+            dependsOn(commonMain)
         }
         val iosX64Main by getting {
             dependsOn(iosMain)

@@ -12,7 +12,7 @@ private val sigabrtMessage = "Native crash with SIGABRT!".encodeToByteArray()
 private val sigfpeMessage = "Native crash with SIGFPE!".encodeToByteArray()
 private val sigillMessage = "Native crash with SIGILL!".encodeToByteArray()
 
-private val reportWriter = NativeReportWriter()
+private val reportWriter = PosixCrashWriter()
 
 fun installPosixExceptionHandler(filepath: String) {
     reportWriter.install(filepath)

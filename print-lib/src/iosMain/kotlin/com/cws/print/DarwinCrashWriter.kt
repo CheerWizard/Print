@@ -7,7 +7,7 @@ import kotlinx.cinterop.UnsafeNumber
 import kotlinx.cinterop.refTo
 import platform.posix.*
 
-class NativeReportWriter {
+class DarwinCrashWriter {
 
     private var file = -1
 
