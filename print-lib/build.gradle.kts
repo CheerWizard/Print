@@ -1,3 +1,5 @@
+import org.gradle.plugins.signing.Sign
+
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.kotlin.serialization)
@@ -29,6 +31,14 @@ tasks.withType<Jar>().configureEach {
 
 val javadocJar by tasks.registering(Jar::class) {
     archiveClassifier.set("javadoc")
+}
+
+// fix signing task dependencies for KMP
+tasks.withType<Sign>().configureEach {
+    val signingTask = this
+    tasks.withType<AbstractPublishToMaven>().configureEach {
+        dependsOn(signingTask)
+    }
 }
 
 // Publishing
