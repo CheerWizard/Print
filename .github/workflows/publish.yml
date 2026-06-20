@@ -11,8 +11,9 @@ jobs:
 
       - name: Debug wrapper
         run: |
-          ls -la gradle/wrapper/
-          file gradle/wrapper/gradle-wrapper.jar
+          pwd
+          find . -name "gradle-wrapper.jar"
+          ls -la gradle/wrapper/ || echo "wrapper dir missing"
 
       - uses: actions/setup-java@v4
         with:
