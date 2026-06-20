@@ -26,14 +26,6 @@ val javadocJar by tasks.registering(Jar::class) {
     archiveClassifier.set("javadoc")
 }
 
-// fix signing task dependencies for KMP
-tasks.withType<Sign>().configureEach {
-    val signingTask = this
-    tasks.withType<AbstractPublishToMaven>().configureEach {
-        dependsOn(signingTask)
-    }
-}
-
 // Publishing
 publishing {
     publications.withType<MavenPublication> {
@@ -299,6 +291,20 @@ android {
 //tasks.register("buildJni") {
 //    dependsOn(cmakeBuild)
 //}
+
+afterEvaluate {
+    val signingKey = System.getenv("GPG_SIGNING_KEY")
+    val signingPassword = System.getenv("GPG_SIGNING_PASSWORD")
+    if (signingKey != null && signingPassword != null) {
+        signing.sign(publishing.publications)
+    }
+    tasks.withType<Sign>().configureEach {
+        val signingTask = this
+        tasks.withType<AbstractPublishToMaven>().configureEach {
+            dependsOn(signingTask)
+        }
+    }
+}
 
 tasks.withType<Jar>().configureEach {
     if (name == "jvmJavadocJar") {
