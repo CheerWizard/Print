@@ -1,3 +1,3 @@
 package com.cws.print
 
-expect fun GlobalExceptionHandler(context: PrintContext, block: (Throwable) -> Unit)
+expect fun GlobalExceptionHandler(crashReportFilepath: String, block: (Throwable) -> Unit)

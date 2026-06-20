@@ -19,6 +19,5 @@ fun main() {
         runBlocking {
             PrintTests.run().join()
         }
-        Print.close()
     }
 }

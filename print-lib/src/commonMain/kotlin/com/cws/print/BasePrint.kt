@@ -7,6 +7,7 @@ import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
+import kotlin.time.Duration.Companion.milliseconds
 
 open class BasePrint {
 
@@ -22,9 +23,9 @@ open class BasePrint {
     private var isInstalled = false
 
     fun install(
-        context: PrintContext,
         logLevel: LogLevel = LogLevel.VERBOSE,
         loggers: Set<Logger> = setOf(ConsoleLogger()),
+        crashReportFilepath: String = "logs/crash-report-${getCurrentTimeMillis().milliseconds.formatDateTime("dd.MM.YYYY")}.log",
         block: () -> Unit,
     ) {
         if (isInstalled) return
@@ -41,30 +42,11 @@ open class BasePrint {
             reportCrash(e)
         }
 
-        GlobalExceptionHandler(context) { throwable ->
+        GlobalExceptionHandler(crashReportFilepath) { throwable ->
             reportCrash(throwable)
         }
 
         isInstalled = true
-    }
-
-    // optional to call, not really required to call from client side
-    fun close() {
-        launch {
-            loggers.forEach { logger ->
-                logger.close()
-            }
-        }
-
-        isInstalled = false
-    }
-
-    fun addLogger(logger: Logger) {
-        loggers.add(logger)
-    }
-
-    fun removeLogger(logger: Logger) {
-        loggers.remove(logger)
     }
 
     fun v(tag: String, message: String) = log(LogLevel.VERBOSE, tag, message)
