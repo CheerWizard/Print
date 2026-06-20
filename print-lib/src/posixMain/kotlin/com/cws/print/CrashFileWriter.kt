@@ -4,10 +4,9 @@ package com.cws.print
 
 import kotlinx.cinterop.ExperimentalForeignApi
 import kotlinx.cinterop.UnsafeNumber
-import kotlinx.cinterop.refTo
 import platform.posix.*
 
-class DarwinCrashWriter {
+class CrashFileWriter {
 
     private var file = -1
 
@@ -26,9 +25,7 @@ class DarwinCrashWriter {
         }
     }
 
-    @OptIn(UnsafeNumber::class)
-    private fun writeBytes(fd: Int, bytes: ByteArray) {
-        write(fd, bytes.refTo(0), bytes.size.toULong())
-    }
-
 }
+
+@OptIn(UnsafeNumber::class)
+expect fun CrashFileWriter.writeBytes(fd: Int, bytes: ByteArray)

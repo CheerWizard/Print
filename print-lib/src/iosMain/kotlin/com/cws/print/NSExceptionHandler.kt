@@ -8,7 +8,7 @@ import platform.Foundation.*
 
 object NSExceptionHandler {
 
-    private val reportWriter = DarwinCrashWriter()
+    private val reportWriter = CrashFileWriter()
 
     fun install(filepath: String) {
         reportWriter.install(filepath)

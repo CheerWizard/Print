@@ -179,7 +179,7 @@ kotlin {
             dependencies {
                 implementation(libs.ktor.client.darwin)
             }
-            dependsOn(commonMain)
+            dependsOn(posixMain)
         }
         val iosX64Main by getting {
             dependsOn(iosMain)

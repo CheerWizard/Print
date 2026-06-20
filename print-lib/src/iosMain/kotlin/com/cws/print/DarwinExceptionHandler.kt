@@ -6,14 +6,7 @@ import kotlinx.cinterop.ExperimentalForeignApi
 import kotlinx.cinterop.alloc
 import kotlinx.cinterop.nativeHeap
 import kotlinx.cinterop.staticCFunction
-import platform.posix.SIGABRT
-import platform.posix.SIGFPE
-import platform.posix.SIGILL
-import platform.posix.SIGSEGV
-import platform.posix._exit
-import platform.posix.SA_RESETHAND
-import platform.posix.SA_RESTART
-import platform.posix.sigaction
+import platform.posix.*
 
 private val sigunknownMessage = "Native crash with unknown signal!".encodeToByteArray()
 private val sigsegvMessage = "Native crash with SIGSEGV!".encodeToByteArray()
@@ -21,7 +14,7 @@ private val sigabrtMessage = "Native crash with SIGABRT!".encodeToByteArray()
 private val sigfpeMessage = "Native crash with SIGFPE!".encodeToByteArray()
 private val sigillMessage = "Native crash with SIGILL!".encodeToByteArray()
 
-private val reportWriter = DarwinCrashWriter()
+private val reportWriter = CrashFileWriter()
 
 fun installDarwinExceptionHandler(filepath: String) {
     reportWriter.install(filepath)
