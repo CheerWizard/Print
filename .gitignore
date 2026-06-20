@@ -6,3 +6,6 @@ local.properties
 /.cxx/
 /gradle/
 /src/
+.idea
+.kotlin
+print-lib/.cxx
