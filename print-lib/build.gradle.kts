@@ -1,5 +1,3 @@
-import org.gradle.plugins.signing.Sign
-
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.kotlin.serialization)
@@ -11,61 +9,6 @@ plugins {
 
 group = "io.github.cheerwizard"
 version = "1.0.0"
-
-// Signing
-signing {
-    val signingKey = System.getenv("GPG_SIGNING_KEY")
-    val signingPassword = System.getenv("GPG_SIGNING_PASSWORD")
-    if (signingKey != null && signingPassword != null) {
-        useInMemoryPgpKeys(signingKey, signingPassword)
-        sign(publishing.publications)
-    }
-}
-
-val javadocJar by tasks.registering(Jar::class) {
-    archiveClassifier.set("javadoc")
-}
-
-// Publishing
-publishing {
-    publications.withType<MavenPublication> {
-        artifact(javadocJar)
-        pom {
-            name.set("Print")
-            description.set("A simple cross platform logging library for KMP projects")
-            url.set("https://github.com/CheerWizard/Print")
-
-            licenses {
-                license {
-                    name.set("MIT License")
-                    url.set("https://opensource.org/licenses/MIT")
-                }
-            }
-
-            developers {
-                developer {
-                    id.set("cheerwizard")
-                    name.set("Cheer Wizard")
-                    email.set("mechanik2442@gmail.com")
-                }
-            }
-
-            scm {
-                connection.set("scm:git:github.com/CheerWizard/Print.git")
-                developerConnection.set("scm:git:ssh://github.com/CheerWizard/Print.git")
-                url.set("https://github.com/CheerWizard/Print")
-            }
-        }
-    }
-}
-
-nmcp {
-    publishAllPublicationsToCentralPortal {
-        username = System.getenv("SONATYPE_USERNAME")
-        password = System.getenv("SONATYPE_PASSWORD")
-        publishingType = "AUTOMATIC"
-    }
-}
 
 android {
     defaultConfig {
@@ -213,6 +156,63 @@ android {
     }
 }
 
+// Publishing
+publishing {
+    publications.withType<MavenPublication> {
+        val pubName = name
+        val javadocJar = tasks.register("${pubName}JavadocJar", Jar::class) {
+            archiveClassifier.set("javadoc")
+            archiveAppendix.set(pubName)
+        }
+        artifact(javadocJar)
+        pom {
+            name.set("Print")
+            description.set("A simple cross platform logging library for KMP projects")
+            url.set("https://github.com/CheerWizard/Print")
+
+            licenses {
+                license {
+                    name.set("MIT License")
+                    url.set("https://opensource.org/licenses/MIT")
+                }
+            }
+
+            developers {
+                developer {
+                    id.set("cheerwizard")
+                    name.set("Cheer Wizard")
+                    email.set("mechanik2442@gmail.com")
+                }
+            }
+
+            scm {
+                connection.set("scm:git:github.com/CheerWizard/Print.git")
+                developerConnection.set("scm:git:ssh://github.com/CheerWizard/Print.git")
+                url.set("https://github.com/CheerWizard/Print")
+            }
+        }
+    }
+}
+
+// Signing
+signing {
+    val signingKey = System.getenv("GPG_SIGNING_KEY")
+    val signingPassword = System.getenv("GPG_SIGNING_PASSWORD")
+    if (signingKey != null && signingPassword != null) {
+        useInMemoryPgpKeys(signingKey, signingPassword)
+        sign(publishing.publications)
+    }
+}
+
+// Auto publish to Maven Central portal
+nmcp {
+    publishAllPublicationsToCentralPortal {
+        username = System.getenv("SONATYPE_USERNAME")
+        password = System.getenv("SONATYPE_PASSWORD")
+        publishingType = "AUTOMATIC"
+    }
+}
+
 //val jniBuildDir = file("$buildDir/jni")
 //
 //fun cmakeTask(projectName: String, platform: String, generator: String) = tasks.register("buildJni_$platform") {
@@ -291,24 +291,3 @@ android {
 //tasks.register("buildJni") {
 //    dependsOn(cmakeBuild)
 //}
-
-afterEvaluate {
-    val signingKey = System.getenv("GPG_SIGNING_KEY")
-    val signingPassword = System.getenv("GPG_SIGNING_PASSWORD")
-    if (signingKey != null && signingPassword != null) {
-        signing.sign(publishing.publications)
-    }
-}
-
-gradle.taskGraph.whenReady {
-    tasks.withType<AbstractPublishToMaven>().configureEach {
-        dependsOn(tasks.withType<Sign>())
-    }
-}
-
-tasks.withType<Jar>().configureEach {
-    if (name == "jvmJavadocJar") {
-        // empty javadoc jar is accepted by Maven Central for KMP
-        archiveClassifier.set("javadoc")
-    }
-}
