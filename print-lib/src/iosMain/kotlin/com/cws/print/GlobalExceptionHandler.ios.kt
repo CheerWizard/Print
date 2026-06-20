@@ -6,5 +6,5 @@ import kotlinx.cinterop.ExperimentalForeignApi
 
 actual fun GlobalExceptionHandler(crashReportFilepath: String, block: (Throwable) -> Unit) {
     NSExceptionHandler.install(crashReportFilepath)
-    NativeExceptionHandler.install(crashReportFilepath)
+    installDarwinExceptionHandler(crashReportFilepath)
 }
