@@ -298,11 +298,11 @@ afterEvaluate {
     if (signingKey != null && signingPassword != null) {
         signing.sign(publishing.publications)
     }
-    tasks.withType<Sign>().configureEach {
-        val signingTask = this
-        tasks.withType<AbstractPublishToMaven>().configureEach {
-            dependsOn(signingTask)
-        }
+}
+
+gradle.taskGraph.whenReady {
+    tasks.withType<AbstractPublishToMaven>().configureEach {
+        dependsOn(tasks.withType<Sign>())
     }
 }
 
