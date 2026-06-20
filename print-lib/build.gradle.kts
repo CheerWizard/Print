@@ -22,13 +22,6 @@ signing {
     }
 }
 
-tasks.withType<Jar>().configureEach {
-    if (name == "jvmJavadocJar") {
-        // empty javadoc jar is accepted by Maven Central for KMP
-        archiveClassifier.set("javadoc")
-    }
-}
-
 val javadocJar by tasks.registering(Jar::class) {
     archiveClassifier.set("javadoc")
 }
@@ -84,27 +77,29 @@ nmcp {
 
 android {
     defaultConfig {
-        externalNativeBuild {
+//        externalNativeBuild {
 //            cmake {
 //                cppFlags += listOf("-std=c++17")
 //            }
-        }
+//        }
 
-        ndk {
-            abiFilters += listOf("arm64-v8a", "x86_64")
-        }
+//        ndk {
+//            abiFilters += listOf("arm64-v8a", "x86_64")
+//        }
     }
 
-    externalNativeBuild {
+//    externalNativeBuild {
 //        cmake {
 //            path = file("src/cpp/native_exception_handler/CMakeLists.txt")
 //            version = "3.22.1"
 //        }
-    }
+//    }
 }
 
 kotlin {
-    androidTarget()
+    androidTarget {
+        publishLibraryVariants("release")
+    }
     jvm("jvm")
     js(IR) {
         browser {
@@ -121,10 +116,6 @@ kotlin {
     iosArm64()
     iosX64()
     iosSimulatorArm64()
-
-    androidTarget {
-        publishLibraryVariants("release")
-    }
 
     compilerOptions {
         freeCompilerArgs.add("-Xcontext-parameters")
@@ -308,3 +299,10 @@ android {
 //tasks.register("buildJni") {
 //    dependsOn(cmakeBuild)
 //}
+
+tasks.withType<Jar>().configureEach {
+    if (name == "jvmJavadocJar") {
+        // empty javadoc jar is accepted by Maven Central for KMP
+        archiveClassifier.set("javadoc")
+    }
+}
