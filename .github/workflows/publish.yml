@@ -1,15 +1,18 @@
 name: Publish to Maven Central
-
 on:
   release:
     types: [created]
-
+  workflow_dispatch:
 jobs:
   publish:
-    runs-on: macos-latest  # macOS required for iOS targets to compile
-
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Debug wrapper
+        run: |
+          ls -la gradle/wrapper/
+          file gradle/wrapper/gradle-wrapper.jar
 
       - uses: actions/setup-java@v4
         with:
@@ -18,6 +21,9 @@ jobs:
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
+
+      - name: Make gradlew executable
+        run: chmod +x gradlew
 
       - name: Publish
         run: ./gradlew :print-lib:publish
