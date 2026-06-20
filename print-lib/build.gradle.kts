@@ -95,9 +95,7 @@ android {
 
 kotlin {
     androidTarget()
-    jvm("jvm") {
-        withJava()
-    }
+    jvm("jvm")
     js(IR) {
         browser {
             binaries.library()
