@@ -4,7 +4,6 @@ build/
 local.properties
 # Project exclude paths
 /.cxx/
-/gradle/
 /src/
 .idea
 .kotlin
