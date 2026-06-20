@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.android.library)
+    alias(libs.plugins.nmcp)
     `maven-publish`
     signing
 }
@@ -49,16 +50,13 @@ publishing {
             }
         }
     }
+}
 
-    repositories {
-        maven {
-            name = "MavenCentral"
-            url = uri("https://central.sonatype.com/api/v1/publisher/upload")
-            credentials {
-                username = System.getenv("SONATYPE_USERNAME")
-                password = System.getenv("SONATYPE_PASSWORD")
-            }
-        }
+nmcp {
+    publishAllPublicationsToCentralPortal {
+        username = System.getenv("SONATYPE_USERNAME")
+        password = System.getenv("SONATYPE_PASSWORD")
+        publishingType = "AUTOMATIC"
     }
 }
 
@@ -102,9 +100,9 @@ kotlin {
     iosX64()
     iosSimulatorArm64()
 
-     androidTarget {
-         publishLibraryVariants("release")
-     }
+    androidTarget {
+        publishLibraryVariants("release")
+    }
 
     sourceSets {
         val commonMain by getting {
