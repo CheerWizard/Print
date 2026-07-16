@@ -7,12 +7,12 @@ A Kotlin Multiplatform logging library with support for terminal, file, network,
 ## Platform Support
 
 | Platform | Console | File | Network | SigNoz | Firebase | Crash Handling |
-|---|---|---|---|---|---|---|
-| Android | + | + | + | + | + | + |
-| iOS | + | + | + | + | + | + |
-| Desktop JVM | + | + | + | + | + | + |
-| Desktop Native (MinGW / Linux / POSIX) | + | + | + | + | + | + |
-| Browser (JS) | + | + (IndexedDB) | + | + | + | + |
+|:---------|:-------:|:----:|:-------:|:------:|:--------:|:--------------:|
+| Android | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| iOS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Desktop JVM | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Desktop Native (Windows / Linux / macOS) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Browser (JavaScript / WebAssembly) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 
 ---
 
@@ -156,13 +156,13 @@ Print.install(
 
 Crash handling is enabled automatically for all code inside the `Print.install {}` lambda. No separate setup is needed.
 
-| Crash Type | Platforms |
-|---|---|
-| Coroutine exceptions (`CoroutineExceptionHandler`) | All |
-| Thread uncaught exceptions (`Thread.setDefaultUncaughtExceptionHandler`) | JVM, Android |
+| Crash Type | Platforms                            |
+|---|--------------------------------------|
+| Coroutine exceptions (`CoroutineExceptionHandler`) | All                                  |
+| Thread uncaught exceptions (`Thread.setDefaultUncaughtExceptionHandler`) | JVM, Android                         |
 | Native signal crashes (`SIGSEGV`, `SIGABRT`, `SIGFPE`, `SIGILL`, `SIGBUS`) | Android, Desktop JVM, Desktop Native |
-| Browser uncaught exceptions (`window.onerror`, `unhandledrejection`) | Browser |
-| iOS uncaught exceptions (`NSException`) | iOS |
+| Browser uncaught exceptions (`window.onerror`, `unhandledrejection`) | JS, WasmJS                           |
+| iOS uncaught exceptions (`NSException`) | iOS                                  |
 
 Native crash reports are written synchronously using async-signal-safe I/O, so the report is preserved even when the process is about to terminate.
 
