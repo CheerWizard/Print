@@ -25,7 +25,7 @@ open class BasePrint {
     fun install(
         logLevel: LogLevel = LogLevel.VERBOSE,
         loggers: Set<Logger> = setOf(ConsoleLogger()),
-        crashReportFilepath: String = "logs/crash-report-${getCurrentTimeMillis().milliseconds.formatDateTime("dd.MM.YYYY")}.log",
+        crashReportFilepath: String = "logs/crash-report-${getCurrentTimestamp("dd.MM.YYYY-HH:mm:ss")}.log",
         block: () -> Unit,
     ) {
         if (isInstalled) return

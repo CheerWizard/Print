@@ -30,15 +30,15 @@ static void writeCrash(int signal) {
     _exit(128 + signal);
 }
 
-JNIEXPORT void JNICALL
+extern "C" JNIEXPORT void JNICALL
 Java_com_cws_print_NativeExceptionHandler_install(
         JNIEnv* env,
         jobject thiz,
         jstring filepath
 ) {
-    const char* cpath = (*env)->GetStringUTFChars(env, filepath, NULL);
+    const char* cpath = env->GetStringUTFChars(filepath, nullptr);
     file = open(cpath, O_WRONLY | O_CREAT | O_APPEND, 0666);
-    (*env)->ReleaseStringUTFChars(env, filepath, cpath);
+    env->ReleaseStringUTFChars(filepath, cpath);
 
     if (file == -1) return;
 

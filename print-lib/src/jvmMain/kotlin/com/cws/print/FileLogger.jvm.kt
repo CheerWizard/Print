@@ -11,7 +11,7 @@ actual class FileLogger(
     actual override fun open() {
         file = File(filepath)
         file?.let { f ->
-            f.parentFile.mkdirs()
+            f.parentFile?.mkdirs()
             if (!f.exists()) {
                 f.createNewFile()
             }

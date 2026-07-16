@@ -25,11 +25,11 @@ class FirebaseLogger(
     override val baseUrl: String = "https://www.google-analytics.com/mp/collect"
 
     override fun getRequestBody(logs: Array<LogData>): Any? {
-        return buildJsonObject {
+        val payload = buildJsonObject {
             put(CLIENT_ID, clientId)
             putJsonArray("events") {
-                addJsonObject {
-                    logs.map { log ->
+                logs.forEach { log ->
+                    addJsonObject {
                         put("name", "log")
                         putJsonObject("params") {
                             put("timestamp", log.timestamp)
@@ -37,13 +37,14 @@ class FirebaseLogger(
                             put("tag", log.tag)
                             put("message", log.message)
                             log.exception?.let { exception ->
-                                put("exception", exception.message)
+                                put("exception", exception.message ?: "Unknown error")
                             }
                         }
                     }
                 }
             }
         }
+        return payload
     }
 
     override fun getHeaders(): Map<String, String> = mapOf(

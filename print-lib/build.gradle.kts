@@ -1,3 +1,7 @@
+@file:OptIn(ExperimentalWasmDsl::class)
+
+import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
+
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.kotlin.serialization)
@@ -8,140 +12,27 @@ plugins {
 }
 
 group = "io.github.cheerwizard"
-version = "1.0.0"
+version = "1.0.1"
 
 android {
     defaultConfig {
-//        externalNativeBuild {
-//            cmake {
-//                cppFlags += listOf("-std=c++17")
-//            }
-//        }
-
-//        ndk {
-//            abiFilters += listOf("arm64-v8a", "x86_64")
-//        }
+        externalNativeBuild {
+            cmake {
+                cppFlags += listOf("-std=c++17")
+            }
+        }
+        ndk {
+            abiFilters += listOf("arm64-v8a", "x86_64")
+        }
     }
 
-//    externalNativeBuild {
-//        cmake {
-//            path = file("src/cpp/native_exception_handler/CMakeLists.txt")
-//            version = "3.22.1"
-//        }
-//    }
-}
-
-kotlin {
-    androidTarget {
-        publishLibraryVariants("release")
-    }
-    jvm("jvm")
-    js(IR) {
-        browser {
-            binaries.library()
-        }
-        nodejs {
-            binaries.library()
+    externalNativeBuild {
+        cmake {
+            path = file("src/cpp/native_exception_handler/CMakeLists.txt")
+            version = "3.22.1"
         }
     }
-    mingwX64()
-    linuxX64()
-    macosX64()
-    macosArm64()
-    iosArm64()
-    iosX64()
-    iosSimulatorArm64()
 
-    compilerOptions {
-        freeCompilerArgs.add("-Xcontext-parameters")
-        freeCompilerArgs.add("-Xexpect-actual-classes")
-    }
-
-    sourceSets {
-        val commonMain by getting {
-            dependencies {
-                // Ktor
-                implementation(libs.ktor.client.core)
-                implementation(libs.ktor.client.content)
-                implementation(libs.ktor.serialization.kotlinx.json)
-                // Standard
-                implementation(libs.kotlinx.datetime)
-                implementation(libs.kotlinx.atomicfu)
-                implementation(libs.kotlinx.coroutines.core)
-                implementation(kotlin("stdlib-common"))
-            }
-            kotlin.srcDir("build/generated/src/commonMain/kotlin")
-        }
-
-        val jniMain by creating {
-            dependencies {}
-            dependsOn(commonMain)
-        }
-
-        val posixMain by creating {
-            dependencies {}
-            dependsOn(commonMain)
-        }
-
-        val androidMain by getting {
-            dependencies {
-                implementation(libs.ktor.client.okhttp)
-            }
-            dependsOn(jniMain)
-        }
-
-        val jvmMain by getting {
-            dependencies {
-                implementation(libs.ktor.client.java)
-            }
-            dependsOn(jniMain)
-        }
-
-        val jsMain by getting {
-            dependencies {
-                implementation(libs.ktor.client.js)
-            }
-            dependsOn(commonMain)
-        }
-
-        val nativeMain by creating {
-            dependencies {
-                implementation(libs.ktor.client.curl)
-            }
-            dependsOn(posixMain)
-        }
-        val mingwX64Main by getting {
-            dependsOn(nativeMain)
-        }
-        val linuxX64Main by getting {
-            dependsOn(nativeMain)
-        }
-        val macosX64Main by getting {
-            dependsOn(nativeMain)
-        }
-        val macosArm64Main by getting {
-            dependsOn(nativeMain)
-        }
-
-        val iosMain by creating {
-            dependencies {
-                implementation(libs.ktor.client.darwin)
-            }
-            dependsOn(posixMain)
-        }
-        val iosX64Main by getting {
-            dependsOn(iosMain)
-        }
-        val iosArm64Main by getting {
-            dependsOn(iosMain)
-        }
-        val iosSimulatorArm64Main by getting {
-            dependsOn(iosMain)
-        }
-    }
-}
-
-android {
     compileSdk = 36
     namespace = "com.cws.print"
 
@@ -153,6 +44,107 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
+    }
+}
+
+kotlin {
+    androidTarget {
+        publishLibraryVariants("release")
+    }
+
+    jvm("jvm")
+
+    js {
+        browser()
+    }
+
+    wasmJs {
+        browser()
+    }
+
+    mingwX64()
+    linuxX64()
+    macosArm64()
+
+    iosArm64()
+    iosX64()
+    iosSimulatorArm64()
+
+    compilerOptions {
+        freeCompilerArgs.add("-Xexpect-actual-classes")
+    }
+
+    sourceSets {
+        val commonMain by getting {
+            dependencies {
+                implementation(libs.ktor.client.core)
+                implementation(libs.ktor.client.content)
+                implementation(libs.ktor.serialization.kotlinx.json)
+                implementation(libs.kotlinx.datetime)
+                implementation(libs.kotlinx.atomicfu)
+                implementation(libs.kotlinx.coroutines.core)
+            }
+            kotlin.srcDir("build/generated/src/commonMain/kotlin")
+        }
+
+        val jniMain by creating {
+            dependsOn(commonMain)
+        }
+
+        val androidMain by getting {
+            dependsOn(jniMain)
+            dependencies {
+                implementation(libs.ktor.client.okhttp)
+            }
+        }
+
+        val jvmMain by getting {
+            dependsOn(jniMain)
+            dependencies {
+                implementation(libs.ktor.client.java)
+            }
+        }
+
+        val jsMain by getting {
+            dependsOn(commonMain)
+            dependencies {
+                implementation(libs.ktor.client.js)
+            }
+        }
+
+        val wasmJsMain by getting {
+            dependsOn(commonMain)
+            dependencies {
+                implementation(libs.kotlinx.browser)
+                implementation(libs.ktor.client.js)
+            }
+        }
+
+        val posixMain by creating {
+            dependsOn(commonMain)
+        }
+
+        val nativeMain by creating {
+            dependsOn(posixMain)
+            dependencies {
+                implementation(libs.ktor.client.curl)
+            }
+        }
+
+        val mingwX64Main by getting { dependsOn(nativeMain) }
+        val linuxX64Main by getting { dependsOn(nativeMain) }
+        val macosArm64Main by getting { dependsOn(nativeMain) }
+
+        val iosMain by creating {
+            dependsOn(posixMain)
+            dependencies {
+                implementation(libs.ktor.client.darwin)
+            }
+        }
+
+        val iosX64Main by getting { dependsOn(iosMain) }
+        val iosArm64Main by getting { dependsOn(iosMain) }
+        val iosSimulatorArm64Main by getting { dependsOn(iosMain) }
     }
 }
 
@@ -213,81 +205,112 @@ nmcp {
     }
 }
 
-//val jniBuildDir = file("$buildDir/jni")
-//
-//fun cmakeTask(projectName: String, platform: String, generator: String) = tasks.register("buildJni_$platform") {
-//    group = "jni"
-//    doLast {
-//        println("Running cmakeTask for platform:$platform project:$projectName")
-//
-//        val outDir = file("$jniBuildDir/$platform")
-//        outDir.mkdirs()
-//
-//        val javaHome = System.getenv("JAVA_HOME") ?: "/usr/lib/jvm/java-21-openjdk-amd64"
-//
-//        val jniPlatformInclude = when (platform) {
-//            "linux-x86_64" -> "linux"
-//            "windows-x86_64" -> "win32"
-//            "macos-x86_64" -> "darwin"
-//            else -> throw GradleException("Unknown platform")
-//        }
-//
-//        val jniIncludeArgs = listOf(
-//            "-DCMAKE_BUILD_TYPE=Release",
-//            "-DJAVA_HOME=$javaHome",
-//            "-DCMAKE_INCLUDE_PATH=$javaHome/include;$javaHome/include/$jniPlatformInclude"
-//        )
-//
-//        project.exec {
-//            workingDir(outDir)
-//            environment("JAVA_HOME", javaHome)
-//            println("Running cmake -G $generator")
-//            commandLine("cmake", "-G", generator, *jniIncludeArgs.toTypedArray(), "../../../src/cpp/$projectName")
-//        }
-//
-//        project.exec {
-//            workingDir(outDir)
-//            environment("JAVA_HOME", javaHome)
-//            println("Running cmake --build .")
-//            commandLine("cmake", "--build", ".")
-//        }
-//
-//        val libName = when (platform) {
-//            "linux-x86_64" -> "lib$projectName.so"
-//            "windows-x86_64" -> "$projectName.dll"
-//            "macos-x86_64" -> "lib$projectName.dylib"
-//            else -> throw GradleException("Unknown platform")
-//        }
-//
-//        project.copy {
-//            from("$outDir/$libName")
-//            into("src/desktopMain/resources/jni/$platform")
-//        }
-//    }
-//}
-//
-//// Determine platform once during configuration
-//val osName = System.getProperty("os.name").lowercase()
-//val osArch = System.getProperty("os.arch").lowercase()
-//
-//println("OS: $osName, Arch: $osArch")
-//
-//val generator = when {
-//    osName.contains("windows") -> "Visual Studio 17 2022"
-//    osName.contains("linux") -> "Unix Makefiles"
-//    osName.contains("mac") -> "Unix Makefiles"
-//    else -> throw GradleException("Unsupported OS: $osName")
-//}
-//
-//val platform = when {
-//    osName.contains("windows") && osArch.contains("64") -> "windows-x86_64"
-//    osName.contains("linux") && osArch.contains("64") -> "linux-x86_64"
-//    osName.contains("mac") && osArch.contains("64") -> "macos-x86_64"
-//    else -> throw GradleException("Unsupported OS/Arch: $osName / $osArch")
-//}
-//
-//val cmakeBuild = cmakeTask("native_exception_handler", platform, generator)
-//
-//tasks.register("buildJni") {
-//    dependsOn(cmakeBuild)
-//}
+data class JniTarget(
+    val name: String,
+    val generator: String,
+    val jniInclude: String,
+    val libraryName: (String) -> String,
+)
+
+val jniTargets = listOf(
+    JniTarget(
+        name = "linuxX64",
+        generator = "Unix Makefiles",
+        jniInclude = "linux",
+        libraryName = { "lib$it.so" }
+    ),
+    JniTarget(
+        name = "macosArm64",
+        generator = "Unix Makefiles",
+        jniInclude = "darwin",
+        libraryName = { "lib$it.dylib" }
+    ),
+    JniTarget(
+        name = "mingwX64",
+        generator = "Visual Studio 17 2022",
+        jniInclude = "win32",
+        libraryName = { "$it.dll" }
+    )
+)
+
+fun registerCmakeTask(
+    projectName: String,
+    target: JniTarget,
+): TaskProvider<Task> {
+
+    val javaHome = System.getenv("JAVA_HOME")
+        ?: throw GradleException("JAVA_HOME is not defined")
+
+    val outDir = layout.buildDirectory.dir("jni/${target.name}")
+
+    val configure = tasks.register<Exec>("configureJni${target.name.replaceFirstChar(Char::uppercase)}") {
+        group = "jni"
+
+        doFirst {
+            outDir.get().asFile.mkdirs()
+        }
+
+        workingDir(outDir.get().asFile)
+
+        environment("JAVA_HOME", javaHome)
+
+        commandLine(
+            "cmake",
+            "-G", target.generator,
+            "-DCMAKE_BUILD_TYPE=Release",
+            "-DJAVA_HOME=$javaHome",
+            "-DCMAKE_INCLUDE_PATH=$javaHome/include;$javaHome/include/${target.jniInclude}",
+            layout.projectDirectory.dir("src/cpp/$projectName").asFile.absolutePath
+        )
+    }
+
+    val build = tasks.register<Exec>("buildNativeJni${target.name.replaceFirstChar(Char::uppercase)}") {
+        group = "jni"
+
+        dependsOn(configure)
+
+        workingDir(outDir.get().asFile)
+
+        environment("JAVA_HOME", javaHome)
+
+        commandLine(
+            "cmake",
+            "--build",
+            "."
+        )
+    }
+
+    val copy = tasks.register<Copy>("copyJni${target.name.replaceFirstChar(Char::uppercase)}") {
+        group = "jni"
+
+        dependsOn(build)
+
+        from(outDir.map { it.file(target.libraryName(projectName)) })
+
+        into(layout.projectDirectory.dir("src/desktopMain/resources/jni/${target.name}"))
+    }
+
+    return tasks.register("buildJni${target.name.replaceFirstChar(Char::uppercase)}") {
+        group = "jni"
+        dependsOn(copy)
+    }
+}
+
+val registeredTasks = jniTargets.associateWith {
+    registerCmakeTask(
+        projectName = "native_exception_handler",
+        target = it
+    )
+}
+
+val currentHost: String get() = when {
+    org.gradle.internal.os.OperatingSystem.current().isLinux -> "linuxX64"
+    org.gradle.internal.os.OperatingSystem.current().isMacOsX -> "macosArm64"
+    org.gradle.internal.os.OperatingSystem.current().isWindows -> "mingwX64"
+    else -> throw GradleException("Unsupported desktop OS")
+}
+
+tasks.register("buildJni") {
+    group = "jni"
+    dependsOn(registeredTasks.entries.first { it.key.name == currentHost }.value)
+}

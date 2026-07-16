@@ -1,0 +1,1186 @@
+16.07.2026 18:05:36 [INFO] UI: User profile loaded
+16.07.2026 18:05:36 [ERROR] Database: Null pointer exception
+java.util.ConcurrentModificationException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:36 [WARNING] Auth: Low memory warning
+java.lang.NullPointerException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:36 [ERROR] Service: Database connection failed
+java.lang.IndexOutOfBoundsException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:36 [ERROR] Database: Unhandled exception occurred
+java.lang.NullPointerException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:37 [VERBOSE] Database: Start profiling function X
+16.07.2026 18:05:37 [VERBOSE] App: Exiting method Y
+16.07.2026 18:05:37 [INFO] App: Service initialized
+16.07.2026 18:05:37 [DEBUG] Service: Coroutine started
+16.07.2026 18:05:37 [DEBUG] UI: Updating state
+16.07.2026 18:05:37 [ERROR] Cache: Network unreachable
+java.lang.IndexOutOfBoundsException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:37 [WARNING] Profiler: Token about to expire
+java.lang.NullPointerException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:37 [ERROR] Database: Null pointer exception
+java.lang.IllegalStateException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:37 [ERROR] Service: Failed to fetch records
+java.lang.IllegalArgumentException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:38 [WARNING] Network: Response slow
+java.lang.NullPointerException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:38 [DEBUG] UI: Checking credentials
+16.07.2026 18:05:38 [DEBUG] Cache: Parsing JSON
+16.07.2026 18:05:38 [VERBOSE] UI: Start profiling function X
+16.07.2026 18:05:38 [VERBOSE] Auth: Start profiling function X
+16.07.2026 18:05:38 [INFO] Network: Connected to database
+16.07.2026 18:05:38 [DEBUG] Auth: Coroutine started
+16.07.2026 18:05:39 [DEBUG] Profiler: Updating state
+16.07.2026 18:05:39 [WARNING] Profiler: Response slow
+java.util.ConcurrentModificationException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:39 [INFO] Profiler: Background task finished
+16.07.2026 18:05:39 [INFO] Cache: User profile loaded
+16.07.2026 18:05:39 [DEBUG] Service: Parsing JSON
+16.07.2026 18:05:39 [VERBOSE] Profiler: Exiting method Y
+16.07.2026 18:05:39 [WARNING] Service: Token about to expire
+java.lang.NullPointerException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:39 [WARNING] Profiler: Deprecated API usage
+java.lang.IllegalArgumentException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:40 [INFO] UI: Background task finished
+16.07.2026 18:05:40 [ERROR] UI: Unhandled exception occurred
+java.lang.IndexOutOfBoundsException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:40 [DEBUG] Auth: Checking credentials
+16.07.2026 18:05:40 [INFO] Cache: Connected to database
+16.07.2026 18:05:40 [DEBUG] Cache: Coroutine started
+16.07.2026 18:05:40 [WARNING] App: Response slow
+java.lang.IndexOutOfBoundsException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:40 [ERROR] Cache: Unhandled exception occurred
+java.lang.IndexOutOfBoundsException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:41 [INFO] UI: Background task finished
+16.07.2026 18:05:41 [VERBOSE] App: End profiling function X
+16.07.2026 18:05:41 [WARNING] App: Low memory warning
+java.lang.IllegalArgumentException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:41 [WARNING] Profiler: Token about to expire
+java.lang.IndexOutOfBoundsException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:41 [INFO] UI: Connected to database
+16.07.2026 18:05:41 [VERBOSE] Service: Exiting method Y
+16.07.2026 18:05:41 [ERROR] App: Failed to fetch records
+java.lang.NullPointerException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:41 [VERBOSE] Cache: End profiling function X
+16.07.2026 18:05:42 [DEBUG] Profiler: Checking credentials
+16.07.2026 18:05:42 [VERBOSE] App: Loop iteration finished
+16.07.2026 18:05:42 [INFO] Service: Application started
+16.07.2026 18:05:42 [DEBUG] Service: Response received
+16.07.2026 18:05:42 [VERBOSE] Service: Exiting method Y
+16.07.2026 18:05:42 [VERBOSE] Auth: Loop iteration finished
+16.07.2026 18:05:42 [DEBUG] Profiler: Cache hit for key
+16.07.2026 18:05:43 [VERBOSE] Cache: Start profiling function X
+16.07.2026 18:05:43 [DEBUG] Cache: Checking credentials
+16.07.2026 18:05:43 [ERROR] Cache: Database connection failed
+java.util.ConcurrentModificationException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:43 [DEBUG] Database: Request headers: {Authorization=...}
+16.07.2026 18:05:43 [WARNING] Network: Token about to expire
+java.util.ConcurrentModificationException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:43 [WARNING] Cache: Token about to expire
+java.lang.NullPointerException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:43 [VERBOSE] App: Entering method Y
+16.07.2026 18:05:43 [DEBUG] Network: Request headers: {Authorization=...}
+16.07.2026 18:05:43 [VERBOSE] Database: Entering method Y
+16.07.2026 18:05:44 [VERBOSE] Cache: Entering method Y
+16.07.2026 18:05:44 [DEBUG] Auth: Coroutine started
+16.07.2026 18:05:44 [DEBUG] Auth: Coroutine started
+16.07.2026 18:05:44 [WARNING] Network: Deprecated API usage
+java.lang.NullPointerException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:44 [DEBUG] Cache: Response received
+16.07.2026 18:05:44 [DEBUG] Cache: Checking credentials
+16.07.2026 18:05:44 [WARNING] Auth: Deprecated API usage
+java.lang.IllegalStateException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:45 [ERROR] Auth: Failed to fetch records
+java.lang.IllegalStateException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:45 [INFO] Database: User profile loaded
+16.07.2026 18:05:45 [WARNING] App: Low memory warning
+java.lang.NullPointerException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:45 [ERROR] Cache: Unhandled exception occurred
+java.lang.IllegalStateException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:45 [WARNING] Auth: Low memory warning
+java.lang.NullPointerException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:45 [WARNING] Database: Token about to expire
+java.lang.NullPointerException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:45 [INFO] Service: Background task finished
+16.07.2026 18:05:45 [ERROR] Profiler: Failed to fetch records
+java.lang.NullPointerException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:45 [WARNING] Cache: Cache miss
+java.lang.IllegalArgumentException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:46 [DEBUG] Profiler: Checking credentials
+16.07.2026 18:05:46 [DEBUG] Auth: Updating state
+16.07.2026 18:05:46 [ERROR] Profiler: Failed to fetch records
+java.lang.IllegalStateException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:46 [WARNING] Network: Low memory warning
+java.lang.IllegalArgumentException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:46 [DEBUG] Cache: Parsing JSON
+16.07.2026 18:05:46 [VERBOSE] Network: Entering method Y
+16.07.2026 18:05:46 [WARNING] UI: Cache miss
+java.util.ConcurrentModificationException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:46 [ERROR] App: Unhandled exception occurred
+java.lang.IndexOutOfBoundsException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:47 [VERBOSE] Cache: Exiting method Y
+16.07.2026 18:05:47 [INFO] Cache: Service initialized
+16.07.2026 18:05:47 [INFO] Database: Background task finished
+16.07.2026 18:05:47 [DEBUG] Profiler: Parsing JSON
+16.07.2026 18:05:47 [DEBUG] App: Response received
+16.07.2026 18:05:47 [ERROR] Profiler: Database connection failed
+java.lang.IllegalArgumentException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:47 [ERROR] UI: Network unreachable
+java.lang.NullPointerException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:47 [ERROR] App: Database connection failed
+java.lang.IllegalStateException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:48 [VERBOSE] Network: Start profiling function X
+16.07.2026 18:05:48 [ERROR] Database: Failed to fetch records
+java.util.ConcurrentModificationException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:48 [INFO] Auth: User profile loaded
+16.07.2026 18:05:48 [WARNING] Database: Token about to expire
+java.lang.IndexOutOfBoundsException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:48 [DEBUG] Profiler: Coroutine started
+16.07.2026 18:05:48 [INFO] UI: Service initialized
+16.07.2026 18:05:48 [VERBOSE] UI: End profiling function X
+16.07.2026 18:05:48 [VERBOSE] Profiler: Entering method Y
+16.07.2026 18:05:48 [VERBOSE] Database: Entering method Y
+16.07.2026 18:05:49 [VERBOSE] Network: End profiling function X
+16.07.2026 18:05:49 [DEBUG] UI: Coroutine started
+16.07.2026 18:05:49 [VERBOSE] Cache: End profiling function X
+16.07.2026 18:05:49 [ERROR] Profiler: Failed to fetch records
+java.lang.IllegalArgumentException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:49 [DEBUG] Network: Parsing JSON
+16.07.2026 18:05:49 [INFO] Database: User profile loaded
+16.07.2026 18:05:50 [WARNING] Profiler: Low memory warning
+java.lang.IllegalArgumentException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:50 [DEBUG] App: Parsing JSON
+16.07.2026 18:05:50 [DEBUG] Database: Request headers: {Authorization=...}
+16.07.2026 18:05:50 [INFO] Profiler: User profile loaded
+16.07.2026 18:05:50 [WARNING] UI: Cache miss
+java.lang.NullPointerException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:50 [INFO] UI: Application started
+16.07.2026 18:05:50 [ERROR] Profiler: Null pointer exception
+java.lang.IllegalArgumentException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:50 [DEBUG] Network: Coroutine started
+16.07.2026 18:05:51 [ERROR] App: Database connection failed
+java.lang.IllegalStateException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:51 [INFO] Cache: User profile loaded
+16.07.2026 18:05:51 [ERROR] Auth: Unhandled exception occurred
+java.lang.IllegalArgumentException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:51 [INFO] App: Background task finished
+16.07.2026 18:05:51 [WARNING] Profiler: Low memory warning
+java.lang.IllegalStateException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:51 [DEBUG] Profiler: Checking credentials
+16.07.2026 18:05:51 [VERBOSE] Auth: Start profiling function X
+16.07.2026 18:05:51 [INFO] Network: Background task finished
+16.07.2026 18:05:52 [WARNING] Network: Low memory warning
+java.util.ConcurrentModificationException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:52 [VERBOSE] UI: Entering method Y
+16.07.2026 18:05:52 [ERROR] App: Null pointer exception
+java.lang.IndexOutOfBoundsException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:52 [DEBUG] UI: Coroutine started
+16.07.2026 18:05:52 [VERBOSE] App: Start profiling function X
+16.07.2026 18:05:52 [WARNING] Database: Cache miss
+java.lang.IllegalArgumentException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:52 [WARNING] UI: Deprecated API usage
+java.lang.NullPointerException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:52 [ERROR] Network: Network unreachable
+java.util.ConcurrentModificationException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:52 [WARNING] App: Low memory warning
+java.lang.IllegalStateException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:52 [INFO] Auth: User profile loaded
+16.07.2026 18:05:53 [ERROR] Network: Null pointer exception
+java.lang.NullPointerException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:53 [ERROR] Cache: Network unreachable
+java.lang.IllegalArgumentException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:53 [VERBOSE] Service: Loop iteration finished
+16.07.2026 18:05:53 [WARNING] App: Low memory warning
+java.lang.IllegalArgumentException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:53 [WARNING] Database: Deprecated API usage
+java.lang.IllegalArgumentException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:53 [DEBUG] App: Request headers: {Authorization=...}
+16.07.2026 18:05:53 [WARNING] Profiler: Response slow
+java.lang.IndexOutOfBoundsException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:54 [VERBOSE] Service: Entering method Y
+16.07.2026 18:05:54 [ERROR] UI: Database connection failed
+java.lang.IllegalStateException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:54 [WARNING] Service: Low memory warning
+java.lang.IllegalStateException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:54 [VERBOSE] Database: Loop iteration finished
+16.07.2026 18:05:54 [ERROR] UI: Database connection failed
+java.util.ConcurrentModificationException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:54 [ERROR] Service: Null pointer exception
+java.lang.IllegalStateException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:54 [WARNING] Network: Response slow
+java.lang.IllegalStateException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:54 [ERROR] UI: Database connection failed
+java.lang.IllegalStateException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:54 [VERBOSE] Database: Loop iteration finished
+16.07.2026 18:05:55 [INFO] App: User profile loaded
+16.07.2026 18:05:55 [WARNING] App: Low memory warning
+java.lang.IndexOutOfBoundsException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:55 [VERBOSE] UI: Exiting method Y
+16.07.2026 18:05:55 [WARNING] Auth: Token about to expire
+java.lang.NullPointerException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:55 [DEBUG] Profiler: Coroutine started
+16.07.2026 18:05:55 [ERROR] Service: Database connection failed
+java.lang.NullPointerException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:55 [WARNING] Service: Token about to expire
+java.lang.IndexOutOfBoundsException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:55 [ERROR] Service: Unhandled exception occurred
+java.lang.IllegalArgumentException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:56 [INFO] Network: Service initialized
+16.07.2026 18:05:56 [WARNING] App: Low memory warning
+java.lang.IllegalArgumentException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:56 [ERROR] Profiler: Null pointer exception
+java.lang.IndexOutOfBoundsException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:56 [INFO] Database: Connected to database
+16.07.2026 18:05:56 [DEBUG] Database: Updating state
+16.07.2026 18:05:56 [ERROR] Cache: Database connection failed
+java.lang.IndexOutOfBoundsException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:56 [DEBUG] Database: Response received
+16.07.2026 18:05:56 [WARNING] Cache: Response slow
+java.lang.IllegalArgumentException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:56 [VERBOSE] Auth: Loop iteration finished
+16.07.2026 18:05:57 [VERBOSE] UI: Start profiling function X
+16.07.2026 18:05:57 [WARNING] UI: Low memory warning
+java.lang.IllegalStateException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:57 [DEBUG] Service: Checking credentials
+16.07.2026 18:05:57 [DEBUG] App: Response received
+16.07.2026 18:05:57 [ERROR] Network: Null pointer exception
+java.lang.NullPointerException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:57 [DEBUG] App: Response received
+16.07.2026 18:05:57 [VERBOSE] App: Loop iteration finished
+16.07.2026 18:05:58 [DEBUG] Cache: Cache hit for key
+16.07.2026 18:05:58 [ERROR] Profiler: Network unreachable
+java.lang.IllegalStateException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:58 [WARNING] App: Low memory warning
+java.lang.NullPointerException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:58 [ERROR] App: Failed to fetch records
+java.util.ConcurrentModificationException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:58 [DEBUG] Auth: Checking credentials
+16.07.2026 18:05:58 [ERROR] Auth: Null pointer exception
+java.lang.IllegalStateException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:58 [VERBOSE] Service: Entering method Y
+16.07.2026 18:05:58 [DEBUG] App: Checking credentials
+16.07.2026 18:05:59 [DEBUG] Profiler: Parsing JSON
+16.07.2026 18:05:59 [DEBUG] App: Request headers: {Authorization=...}
+16.07.2026 18:05:59 [ERROR] Service: Null pointer exception
+java.util.ConcurrentModificationException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:59 [WARNING] Profiler: Response slow
+java.util.ConcurrentModificationException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:59 [INFO] Cache: Background task finished
+16.07.2026 18:05:59 [WARNING] UI: Low memory warning
+java.lang.IllegalArgumentException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:05:59 [VERBOSE] Service: End profiling function X
+16.07.2026 18:05:59 [DEBUG] Service: Request headers: {Authorization=...}
+16.07.2026 18:06:00 [INFO] Network: Connected to database
+16.07.2026 18:06:00 [ERROR] Network: Unhandled exception occurred
+java.lang.IndexOutOfBoundsException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:06:00 [WARNING] Profiler: Response slow
+java.lang.IllegalArgumentException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:06:00 [INFO] Profiler: User profile loaded
+16.07.2026 18:06:00 [DEBUG] App: Request headers: {Authorization=...}
+16.07.2026 18:06:00 [INFO] App: Connected to database
+16.07.2026 18:06:00 [WARNING] Cache: Token about to expire
+java.lang.IllegalArgumentException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:06:00 [DEBUG] UI: Checking credentials
+16.07.2026 18:06:00 [INFO] Profiler: Connected to database
+16.07.2026 18:06:01 [DEBUG] Cache: Request headers: {Authorization=...}
+16.07.2026 18:06:01 [ERROR] Cache: Database connection failed
+java.lang.IllegalStateException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:06:01 [WARNING] Cache: Cache miss
+java.lang.IndexOutOfBoundsException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:06:01 [ERROR] Database: Network unreachable
+java.lang.IllegalArgumentException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:06:01 [INFO] Auth: Service initialized
+16.07.2026 18:06:01 [INFO] Service: User profile loaded
+16.07.2026 18:06:01 [INFO] UI: Service initialized
+16.07.2026 18:06:01 [INFO] UI: Background task finished
+16.07.2026 18:06:02 [INFO] Auth: Connected to database
+16.07.2026 18:06:02 [ERROR] Service: Failed to fetch records
+java.lang.IndexOutOfBoundsException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:06:02 [INFO] Database: Service initialized
+16.07.2026 18:06:02 [INFO] Profiler: Background task finished
+16.07.2026 18:06:02 [WARNING] App: Low memory warning
+java.util.ConcurrentModificationException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:06:02 [ERROR] Database: Unhandled exception occurred
+java.util.ConcurrentModificationException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:06:02 [DEBUG] Database: Cache hit for key
+16.07.2026 18:06:02 [VERBOSE] Cache: Exiting method Y
+16.07.2026 18:06:02 [VERBOSE] App: Entering method Y
+16.07.2026 18:06:03 [INFO] Network: Background task finished
+16.07.2026 18:06:03 [WARNING] Profiler: Response slow
+java.lang.IndexOutOfBoundsException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:06:03 [INFO] Database: User profile loaded
+16.07.2026 18:06:03 [WARNING] App: Token about to expire
+java.lang.NullPointerException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:06:03 [WARNING] Database: Low memory warning
+java.lang.IllegalArgumentException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:06:03 [WARNING] UI: Deprecated API usage
+java.util.ConcurrentModificationException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:45)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:06:03 [INFO] App: Connected to database
+16.07.2026 18:06:03 [WARNING] Database: Token about to expire
+java.lang.NullPointerException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:06:04 [DEBUG] Network: Cache hit for key
+16.07.2026 18:06:04 [ERROR] Profiler: Network unreachable
+java.lang.NullPointerException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+16.07.2026 18:06:04 [DEBUG] Auth: Cache hit for key

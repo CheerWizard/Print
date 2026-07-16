@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.22.1)
-project(cmemory)
+project(native_exception_handler)
 
 if (NOT CMAKE_SYSTEM_NAME STREQUAL "Android")
     if(NOT DEFINED ENV{JAVA_HOME})
@@ -7,6 +7,7 @@ if (NOT CMAKE_SYSTEM_NAME STREQUAL "Android")
     endif()
 
     set(JAVA_INCLUDE_DIR "$ENV{JAVA_HOME}/include")
+
     if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
         set(PLATFORM_DIR "linux")
     elseif(CMAKE_SYSTEM_NAME STREQUAL "Darwin")
@@ -16,6 +17,7 @@ if (NOT CMAKE_SYSTEM_NAME STREQUAL "Android")
     else()
         message(FATAL_ERROR "Unsupported platform: ${CMAKE_SYSTEM_NAME}")
     endif()
+
     set(JAVA_INCLUDE_DIR_PLATFORM "$ENV{JAVA_HOME}/include/${PLATFORM_DIR}")
 
     include_directories(${JAVA_INCLUDE_DIR} ${JAVA_INCLUDE_DIR_PLATFORM})

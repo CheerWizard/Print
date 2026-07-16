@@ -23,7 +23,7 @@ Add the dependency to your shared module:
 ```kotlin
 // build.gradle.kts
 dependencies {
-    implementation("io.github.cheerwizard:print:1.0.0")
+    implementation("io.github.cheerwizard:print:1.0.1")
 }
 ```
 

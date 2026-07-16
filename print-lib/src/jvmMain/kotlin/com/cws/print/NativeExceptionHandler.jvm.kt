@@ -1,10 +1,13 @@
 package com.cws.print
 
 import java.io.File
+import kotlin.io.path.absolutePathString
+import kotlin.io.path.outputStream
 import kotlin.use
 
 actual open class PlatformNativeExceptionHandler actual constructor() {
 
+    @Suppress("UnsafeDynamicallyLoadedCode")
     protected actual fun init() {
         val libName = "native_exception_handler"
         val os = System.getProperty("os.name").lowercase()
@@ -26,13 +29,15 @@ actual open class PlatformNativeExceptionHandler actual constructor() {
             }
         }
 
-        val tmpFile = createTempFile(suffix = File(libFile).extension)
+        val tmpFile = kotlin.io.path.createTempFile(suffix = File(libFile).extension)
 
         NativeExceptionHandler::class.java.getResourceAsStream("/$libFile")!!.use { input ->
-            tmpFile.outputStream().use { it.write(input.readBytes()) }
+            tmpFile.outputStream().use {
+                it.write(input.readBytes())
+            }
         }
 
-        System.load(tmpFile.absolutePath)
+        System.load(tmpFile.absolutePathString())
     }
 
 }

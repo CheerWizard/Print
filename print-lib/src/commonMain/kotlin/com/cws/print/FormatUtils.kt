@@ -2,14 +2,20 @@ package com.cws.print
 
 import kotlin.time.Duration.Companion.milliseconds
 
-fun getCurrentTimestamp(): String {
-    return getCurrentTimeMillis().milliseconds.formatDateTime("dd.MM.YYYY HH:mm:ss")
+fun getCurrentTimestamp(pattern: String = "dd.MM.YYYY HH:mm:ss"): String {
+    return getCurrentTimeMillis().milliseconds.formatDateTime(pattern)
 }
 
-fun formatLog(logLevel: LogLevel, tag: String, message: String, exception: Throwable? = null): String {
+fun formatLog(
+    logLevel: LogLevel,
+    tag: String,
+    message: String,
+    exception: Throwable? = null,
+    timestamp: String = getCurrentTimestamp(),
+): String {
     return if (exception == null) {
-        "${getCurrentTimestamp()} $logLevel $tag: $message"
+        "$timestamp $logLevel $tag: $message"
     } else {
-        "${getCurrentTimestamp()} $logLevel $tag: $message\n${exception.stackTraceToString()}"
+        "$timestamp $logLevel $tag: $message\n${exception.stackTraceToString()}"
     }
 }

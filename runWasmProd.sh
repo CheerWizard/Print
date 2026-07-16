@@ -1,0 +1,1 @@
+./gradlew :print-sandbox:wasmJsBrowserDistribution --continuous

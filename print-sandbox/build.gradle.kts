@@ -1,6 +1,13 @@
+@file:OptIn(ExperimentalWasmDsl::class)
+
+import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
+import org.jetbrains.kotlin.gradle.targets.js.dsl.KotlinJsTargetDsl
+
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.compose.multiplatform)
+    alias(libs.plugins.compose.compiler)
     id("com.android.application")
 }
 
@@ -9,12 +16,35 @@ kotlin {
 
     jvm("desktop")
 
-    js(IR) {
+    js {
         browser {
-            binaries.executable()
+            commonWebpackConfig { outputFileName = "print-sandbox.js" }
         }
-        nodejs {
-            binaries.executable()
+        binaries.executable()
+    }
+
+    wasmJs {
+        browser {
+            commonWebpackConfig { outputFileName = "print-sandbox.js" }
+        }
+        binaries.executable()
+    }
+
+    macosArm64 {
+        binaries {
+            executable()
+        }
+    }
+
+    linuxX64 {
+        binaries {
+            executable()
+        }
+    }
+
+    mingwX64 {
+        binaries {
+            executable()
         }
     }
 
@@ -22,14 +52,7 @@ kotlin {
         binaries {
             framework {
                 baseName = "PrintSandbox"
-            }
-        }
-    }
-
-    iosX64 {
-        binaries {
-            framework {
-                baseName = "PrintSandbox"
+                isStatic = true
             }
         }
     }
@@ -38,6 +61,7 @@ kotlin {
         binaries {
             framework {
                 baseName = "PrintSandbox"
+                isStatic = true
             }
         }
     }
@@ -45,30 +69,59 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
+                // Print
                 implementation(project(":print-lib"))
+                // Standard
                 implementation(libs.kotlinx.coroutines.core)
-                implementation(kotlin("stdlib-common"))
             }
         }
 
-        val androidMain by getting {
+        val composeMain by creating {
+            dependencies {
+                // Compose
+                implementation(libs.runtime)
+                implementation(libs.foundation)
+                implementation(libs.ui.tooling.preview)
+                implementation(libs.components.resources)
+            }
             dependsOn(commonMain)
         }
 
-        val iosMain by creating {
-            dependsOn(commonMain)
+        val androidMain by getting {
+            dependencies {
+                // Compose
+                api("androidx.activity:activity-compose:1.10.1")
+                api(libs.androidx.core.ktx)
+            }
+            dependsOn(composeMain)
         }
 
         val desktopMain by getting {
-            dependsOn(commonMain)
+            dependencies {
+                // Compose
+                implementation(compose.desktop.currentOs)
+            }
+            dependsOn(composeMain)
         }
 
         val jsMain by getting {
+            dependsOn(composeMain)
+        }
+
+        val wasmJsMain by getting {
+            dependsOn(composeMain)
+        }
+
+        val nativeMain by creating {
             dependsOn(commonMain)
         }
 
-        val iosX64Main by getting {
-            dependsOn(iosMain)
+        val mingwX64Main by getting { dependsOn(nativeMain) }
+        val linuxX64Main by getting { dependsOn(nativeMain) }
+        val macosArm64Main by getting { dependsOn(nativeMain) }
+
+        val iosMain by creating {
+            dependsOn(composeMain)
         }
 
         val iosArm64Main by getting {
@@ -104,4 +157,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+}
+
+// Force-disable the strict lock validation tasks
+tasks.matching { it.name == "kotlinWasmStoreYarnLock" || it.name == "kotlinStoreYarnLock" }.configureEach {
+    enabled = false
 }

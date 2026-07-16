@@ -12,7 +12,13 @@ actual class FileLogger(
     private val internalDir: File = context.filesDir
 
     actual override fun open() {
-        file = File(internalDir, filepath)
+        file = internalDir.resolve(filepath)
+        file?.let { f ->
+            f.parentFile?.mkdirs()
+            if (!f.exists()) {
+                f.createNewFile()
+            }
+        }
     }
 
     actual override fun close() {

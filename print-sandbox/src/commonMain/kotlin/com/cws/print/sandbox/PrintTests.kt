@@ -1,3 +1,5 @@
+package com.cws.print.sandbox
+
 import com.cws.print.LogLevel
 import com.cws.print.Print
 import com.cws.print.SafeCoroutineScope
@@ -6,7 +8,8 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
-import kotlin.time.Duration.Companion.seconds
+import kotlin.time.Duration
+import kotlin.time.Duration.Companion.milliseconds
 
 object PrintTests {
 
@@ -44,11 +47,11 @@ object PrintTests {
 
     private val scope = SafeCoroutineScope(Dispatchers.Default)
 
-    fun run(): Job {
+    fun run(period: Duration = 100.milliseconds): Job {
         return scope.launch {
             while (isActive) {
                 randomPrint()
-                delay(1.seconds)
+                delay(period)
             }
         }
     }
@@ -81,10 +84,7 @@ object PrintTests {
                 val exception = exceptions.random()
                 Print.e(tag, message, exception)
             }
-            LogLevel.FATAL -> {
-                val exception = exceptions.random()
-                throw exception
-            }
+            else -> {}
         }
     }
 
