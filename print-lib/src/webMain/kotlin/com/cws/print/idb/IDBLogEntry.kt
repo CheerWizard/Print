@@ -2,12 +2,17 @@
 
 package com.cws.print.idb
 
+import com.cws.print.JsObject
 import com.cws.print.LogLevel
 import com.cws.print.getCurrentTimeMillis
 import com.cws.print.getCurrentTimestamp
 import kotlin.js.ExperimentalWasmJsInterop
 import kotlin.js.JsAny
+import kotlin.js.JsArray
+import kotlin.js.JsString
 import kotlin.js.js
+import kotlin.js.toJsArray
+import kotlin.js.toJsString
 
 external interface IDBLogEntry : JsAny {
     var timestamp: Double
@@ -15,7 +20,7 @@ external interface IDBLogEntry : JsAny {
     var logLevel: String
     var tag: String
     var message: String
-    var errorStack: Array<String>?
+    var errorStack: JsArray<JsString>?
 }
 
 fun IDBLogEntry(
@@ -26,7 +31,7 @@ fun IDBLogEntry(
     message: String,
     exception: Throwable? = null,
 ): IDBLogEntry {
-    val log: IDBLogEntry = js("({})")
+    val log: IDBLogEntry = JsObject()
     log.timestamp = timestamp
     log.dateTime = dateTime
     log.logLevel = logLevel.name
@@ -36,11 +41,12 @@ fun IDBLogEntry(
     return log
 }
 
-fun Throwable?.toStackFrames(): Array<String>? {
+fun Throwable?.toStackFrames(): JsArray<JsString>? {
     if (this == null) return null
     val rawStack = stackTraceToString()
     return rawStack
         .split("\n")
         .filter { it.isNotBlank() }
-        .toTypedArray()
+        .map { it.toJsString() }
+        .toJsArray()
 }

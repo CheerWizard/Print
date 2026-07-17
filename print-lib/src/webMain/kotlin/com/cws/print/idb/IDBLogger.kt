@@ -44,7 +44,7 @@ class IDBLogger(
     override fun open() {
         if (openRequest != null || indexedDB != null) return
 
-        val openRequest = IDB.open(name, version)
+        val openRequest = IDB_open(name, version)
 
         openRequest.onupgradeneeded = {
             openRequest.result?.unsafeCast<IDBDatabase>()?.let { db ->

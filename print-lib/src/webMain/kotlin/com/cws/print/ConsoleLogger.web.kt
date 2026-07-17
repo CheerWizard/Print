@@ -10,13 +10,9 @@ internal fun consoleInfo(message: String): Unit = js("console.info(message)")
 
 internal fun consoleWarn(message: String): Unit = js("console.warn(message)")
 
-internal fun consoleError(message: String, errorStack: JsAny? = null) {
-    if (errorStack == null) {
-        js("console.error(message)")
-    } else {
-        js("console.error(message, errorStack)")
-    }
-}
+internal fun consoleError(message: String): Unit = js("console.error(message)")
+
+internal fun consoleError(message: String, errorStack: JsAny?): Unit = js("console.error(message, errorStack)")
 
 actual class ConsoleLogger actual constructor() : Logger {
 

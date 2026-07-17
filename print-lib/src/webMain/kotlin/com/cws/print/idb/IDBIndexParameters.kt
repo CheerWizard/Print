@@ -2,6 +2,7 @@
 
 package com.cws.print.idb
 
+import com.cws.print.JsObject
 import kotlin.js.ExperimentalWasmJsInterop
 import kotlin.js.JsAny
 import kotlin.js.js
@@ -15,7 +16,7 @@ fun IDBIndexParameters(
     unique: Boolean,
     multiEntry: Boolean? = null,
 ): IDBIndexParameters {
-    val value: IDBIndexParameters = js("({})")
+    val value: IDBIndexParameters = JsObject()
     return value.apply {
         this.unique = unique
         this.multiEntry = multiEntry
