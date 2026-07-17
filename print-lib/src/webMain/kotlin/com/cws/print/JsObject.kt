@@ -9,4 +9,4 @@ import kotlin.js.unsafeCast
 
 internal fun JsAnyObject(): JsAny = js("({})")
 
-fun <T> JsObject(): T = JsAnyObject().unsafeCast()
+fun <T : JsAny> JsObject(): T = JsAnyObject().unsafeCast<T>()
