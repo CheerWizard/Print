@@ -14,9 +14,9 @@ actual class ConsoleLogger actual constructor() : Logger {
         val formattedMessage = formatLog(logLevel, tag, message)
 
         if (logLevel.ordinal >= LogLevel.ERROR.ordinal) {
-            System.err.println(formattedMessage)
+            System.err.print(formattedMessage)
         } else {
-            System.out.println("${logLevel.toColorCode()}$formattedMessage")
+            System.out.print("${logLevel.toColorCode()}$formattedMessage")
         }
 
         exception?.printStackTrace()

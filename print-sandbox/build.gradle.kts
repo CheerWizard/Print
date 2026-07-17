@@ -1,18 +1,21 @@
 @file:OptIn(ExperimentalWasmDsl::class)
 
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
-import org.jetbrains.kotlin.gradle.targets.js.dsl.KotlinJsTargetDsl
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.compose.multiplatform)
     alias(libs.plugins.compose.compiler)
-    id("com.android.application")
+    alias(libs.plugins.android.kotlin.multiplatform.library)
 }
 
 kotlin {
-    androidTarget()
+    android {
+        namespace = "com.cws.print.sandbox"
+        compileSdk = 36
+        minSdk = 26
+    }
 
     jvm("desktop")
 
@@ -70,19 +73,19 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 // Print
-                implementation(project(":print-lib"))
+                api(project(":print-lib"))
                 // Standard
-                implementation(libs.kotlinx.coroutines.core)
+                api(libs.kotlinx.coroutines.core)
             }
         }
 
         val composeMain by creating {
             dependencies {
                 // Compose
-                implementation(libs.runtime)
-                implementation(libs.foundation)
-                implementation(libs.ui.tooling.preview)
-                implementation(libs.components.resources)
+                api(libs.runtime)
+                api(libs.foundation)
+                api(libs.ui.tooling.preview)
+                api(libs.components.resources)
             }
             dependsOn(commonMain)
         }
@@ -90,7 +93,7 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 // Compose
-                api("androidx.activity:activity-compose:1.10.1")
+                api(libs.androidx.activity.compose)
                 api(libs.androidx.core.ktx)
             }
             dependsOn(composeMain)
@@ -131,31 +134,6 @@ kotlin {
         val iosSimulatorArm64Main by getting {
             dependsOn(iosMain)
         }
-    }
-}
-
-android {
-    namespace = "com.cws.print.sandbox"
-    compileSdk = 36
-
-    defaultConfig {
-        applicationId = "com.cws.print.sandbox"
-        minSdk = 26
-        targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
-    }
-
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            isShrinkResources = false
-        }
-    }
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
     }
 }
 

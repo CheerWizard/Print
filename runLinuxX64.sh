@@ -1,2 +1,2 @@
-./gradlew :print-sandbox:linkDebugExecutableLinuxX64
-./gradlew :print-sandbox:runDebugExecutableLinuxX64
+./gradlew :print-sandbox-native:linkDebugExecutableLinuxX64
+./gradlew :print-sandbox-native:runDebugExecutableLinuxX64

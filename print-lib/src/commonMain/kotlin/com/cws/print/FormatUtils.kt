@@ -14,8 +14,8 @@ fun formatLog(
     timestamp: String = getCurrentTimestamp(),
 ): String {
     return if (exception == null) {
-        "$timestamp $logLevel $tag: $message"
+        "$timestamp $logLevel $tag: $message\n"
     } else {
-        "$timestamp $logLevel $tag: $message\n${exception.stackTraceToString()}"
+        "$timestamp $logLevel $tag: $message\n ${exception.stackTraceToString()}"
     }
 }

@@ -1,31 +1,25 @@
 package com.cws.print
 
-import kotlinx.cinterop.CPointer
-import kotlinx.cinterop.ExperimentalForeignApi
-import kotlinx.cinterop.cstr
-import kotlinx.cinterop.memScoped
-import platform.posix.FILE
-import platform.posix.fclose
-import platform.posix.fflush
-import platform.posix.fopen
-import platform.posix.fwrite
+import kotlin.time.Duration
+import kotlin.time.Duration.Companion.seconds
 
-@OptIn(ExperimentalForeignApi::class)
 actual class FileLogger(
-    private val filepath: String
+    private val filepath: String,
+    private val flushPeriod: Duration = 3.seconds
 ) : Logger {
 
-    private var file: CPointer<FILE>? = null
+    private var nativeFileLogger: NativeFileLogger? = null
 
     actual override fun open() {
-        file = fopen(filepath, "w")
+        if (nativeFileLogger != null) return
+        nativeFileLogger = NativeFileLogger(filepath, flushPeriod).apply {
+            open()
+        }
     }
 
     actual override fun close() {
-        if (file != null) {
-            fclose(file)
-        }
-        file = null
+        nativeFileLogger?.close()
+        nativeFileLogger = null
     }
 
     actual override fun log(
@@ -34,14 +28,7 @@ actual class FileLogger(
         message: String,
         exception: Throwable?,
     ) {
-        if (file != null) {
-            memScoped {
-                // TODO: can be optimized by caching messages in nativeHeap, to remove need of memScoped arena
-                val log = formatLog(logLevel, tag, message, exception)
-                fwrite(log.cstr.getPointer(memScope), 1u, log.length.toULong(), file)
-                fflush(file)
-            }
-        }
+        nativeFileLogger?.log(logLevel, tag, message, exception)
     }
 
 }

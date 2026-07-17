@@ -1,2 +1,2 @@
-./gradlew :print-sandbox:linkDebugExecutableMacosArm64
-./gradlew :print-sandbox:runDebugExecutableMacosArm64
+./gradlew :print-sandbox-native:linkDebugExecutableMacosArm64
+./gradlew :print-sandbox-native:runDebugExecutableMacosArm64

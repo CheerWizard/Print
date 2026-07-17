@@ -1,28 +1,31 @@
 package com.cws.print
 
 import android.content.Context
-import java.io.File
+import kotlin.time.Duration
+import kotlin.time.Duration.Companion.seconds
 
 actual class FileLogger(
-    context: Context,
-    private val filepath: String
+    private val context: Context,
+    private val filepath: String,
+    private val flushPeriod: Duration = 3.seconds,
 ) : Logger {
 
-    private var file: File? = null
-    private val internalDir: File = context.filesDir
+    private var jvmFileLogger: JVMFileLogger? = null
 
     actual override fun open() {
-        file = internalDir.resolve(filepath)
-        file?.let { f ->
-            f.parentFile?.mkdirs()
-            if (!f.exists()) {
-                f.createNewFile()
-            }
+        if (jvmFileLogger != null) return
+
+        jvmFileLogger = JVMFileLogger(
+            context.filesDir.resolve(filepath),
+            flushPeriod
+        ).apply {
+            open()
         }
     }
 
     actual override fun close() {
-        file = null
+        jvmFileLogger?.close()
+        jvmFileLogger = null
     }
 
     actual override fun log(
@@ -31,7 +34,7 @@ actual class FileLogger(
         message: String,
         exception: Throwable?,
     ) {
-        file?.writeText(formatLog(logLevel, tag, message, exception))
+        jvmFileLogger?.log(logLevel, tag, message, exception)
     }
 
 }

@@ -22,12 +22,16 @@ actual class ConsoleLogger actual constructor() : Logger {
 
         if (logLevel.ordinal >= LogLevel.ERROR.ordinal) {
             fprintf(stderr, formattedMessage)
+            fflush(stderr)
         } else {
             fprintf(stdout, formattedMessage)
             fflush(stdout)
         }
 
-        exception?.printStackTrace()
+        exception?.let {
+            fprintf(stderr, it.stackTraceToString() + "\n")
+            fflush(stderr)
+        }
     }
 
 }
