@@ -1,5 +1,6 @@
 package com.cws.print
 
+import io.ktor.http.ContentType
 import kotlinx.serialization.Serializable
 import kotlin.time.Duration
 import kotlin.time.Duration.Companion.seconds
@@ -43,14 +44,13 @@ data class AttributeValue(val stringValue: String)
 
 class SignozLogger(
     host: String,
-    logLevel: LogLevel = LogLevel.WARNING
-) : NetworkLogger(logLevel) {
+    override val sendPeriod: Duration = 10.seconds,
+) : NetworkLogger() {
 
     override val baseUrl = "http://$host:4318/v1/logs"
     override val tag: String = "SignozLogger"
-    override val sendPeriod: Duration = 10.seconds
 
-    override fun getRequestBody(logs: Array<LogData>): Any? {
+    override fun getRequestBody(logs: Array<NetworkLogEntry>): Any {
         val logRecords = logs.map { log ->
             LogRecord(
                 timeUnixNano = log.timestamp.toString(),
@@ -73,6 +73,8 @@ class SignozLogger(
         )
     }
 
-    override fun getHeaders(): Map<String, String> = emptyMap()
+    override fun getQueryParams(): Map<String, String> = emptyMap()
+
+    override fun getContentType(): ContentType = ContentType.Application.Json
 
 }

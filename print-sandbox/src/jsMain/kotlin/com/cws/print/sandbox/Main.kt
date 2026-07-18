@@ -6,6 +6,7 @@ import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.window.ComposeViewport
 import com.cws.print.ConsoleLogger
 import com.cws.print.FileLogger
+import com.cws.print.FirebaseWebStreamLogger
 import com.cws.print.Print
 import com.cws.print.getCurrentTimestamp
 import com.cws.print.idb.IDBLogger
@@ -35,6 +36,11 @@ fun App() {
                 maxLogsCount = 5000,
             )),
             UILogger,
+//            FirebaseWebStreamLogger(
+//                measurementId = "G-YMCLLHX18F",
+//                apiSecret = "-FjHofacQOKZ_jWD-uSD1g",
+//                clientId = "test-client-1234567",
+//            ),
             // TODO need to find a host for SigNoz Cloud
 //            SignozLogger(host = "")
         ),

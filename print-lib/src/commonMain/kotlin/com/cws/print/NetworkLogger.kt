@@ -4,21 +4,63 @@ import io.ktor.client.HttpClient
 import io.ktor.client.request.post
 import io.ktor.client.request.setBody
 import io.ktor.http.ContentType
-import io.ktor.http.HttpStatusCode
 import io.ktor.http.contentType
-import kotlinx.atomicfu.locks.ReentrantLock
-import kotlinx.atomicfu.locks.withLock
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.SupervisorJob
-import kotlinx.coroutines.cancel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import kotlin.time.Duration
 
+data class NetworkLogEntry(
+    var timestamp: Long = 0,
+    var level: LogLevel = LogLevel.NONE,
+    var tag: String = "",
+    var message: String = "",
+    var exception: Throwable? = null
+)
+
+class NetworkLogBuffer {
+
+    constructor(
+        capacity: Int,
+        logs: Array<NetworkLogEntry> = Array(capacity) { NetworkLogEntry() },
+    ) {
+        this.logs = logs
+    }
+
+    var logs: Array<NetworkLogEntry>
+        private set
+
+    var logIndex: Int = 0
+        private set
+
+    fun add(logLevel: LogLevel, tag: String, message: String, exception: Throwable?) {
+        logs[logIndex++].apply {
+            this.timestamp = getCurrentTimeMillis()
+            this.level = logLevel
+            this.tag = tag
+            this.message = message
+            this.exception = exception
+        }
+    }
+
+    fun isEmpty(): Boolean = logIndex == 0
+
+    fun isFull(): Boolean = logIndex > logs.lastIndex
+
+    fun clear() {
+        logIndex = 0
+    }
+
+}
+
 abstract class NetworkLogger(
-    var logLevel: LogLevel = LogLevel.WARNING
+    maxLogsCount: Int = 16,
 ) : Logger {
 
     protected abstract val tag: String
@@ -26,16 +68,18 @@ abstract class NetworkLogger(
     protected abstract val baseUrl: String
 
     private var httpClient: HttpClient? = null
-    private var scope: CoroutineScope? = null
-    private val logs = LogBuffer(100)
+    private val logs = NetworkLogBuffer(maxLogsCount)
     private val consoleLogger = ConsoleLogger()
-    private val lock = ReentrantLock()
+
+    private val sendScope: CoroutineScope = CoroutineScope(Dispatchers.Default + SupervisorJob())
+    private var sendJob: Job? = null
+    private val sendMutex = Mutex()
 
     override fun open() {
-        if (scope?.isActive == true) return
+        if (sendJob?.isActive == true) return
         httpClient = provideHttpClient()
-        scope = CoroutineScope(Dispatchers.Default + SupervisorJob())
-        scope?.launch {
+        sendJob?.cancel()
+        sendJob = sendScope.launch {
             while (isActive) {
                 delay(sendPeriod)
                 sendLogs()
@@ -44,8 +88,8 @@ abstract class NetworkLogger(
     }
 
     override fun close() {
-        scope?.cancel()
-        scope = null
+        sendJob?.cancel()
+        sendJob = null
         httpClient?.let { client ->
             if (client.isActive) {
                 client.close()
@@ -55,52 +99,57 @@ abstract class NetworkLogger(
     }
 
     override fun log(logLevel: LogLevel, tag: String, message: String, exception: Throwable?) {
-        if (logLevel.ordinal >= this.logLevel.ordinal && logs.logIndex >= 0) {
+        if (logs.logIndex >= 0) {
             if (logs.isFull()) {
-                scope?.launch {
-                    sendLogs()
+                sendScope.launch {
+//                    sendLogs()
                     addLog(logLevel, tag, message, exception)
                 }
             } else {
                 addLog(logLevel, tag, message, exception)
+                if (logLevel == LogLevel.FATAL) {
+                    sendScope.launch {
+//                        sendLogs()
+                    }
+                }
             }
         }
     }
 
     private fun addLog(logLevel: LogLevel, tag: String, message: String, exception: Throwable?) {
-        lock.withLock {
-            logs.add(logLevel, tag, message, exception)
-        }
+        logs.add(logLevel, tag, message, exception)
     }
 
     private suspend fun sendLogs() {
-        lock.withLock {
-            val httpClient = this.httpClient
-            if (httpClient == null || logs.isEmpty()) return
+        if (logs.isEmpty()) return
 
-            val requestBody = getRequestBody(logs.logs)
+        httpClient?.let { httpClient ->
+            sendMutex.withLock {
+                val requestBody = getRequestBody(logs.logs)
 
-            logs.clear()
+                logs.clear()
 
-            val response = httpClient.post(baseUrl) {
-                url {
-                    getHeaders().forEach { (key, value) ->
-                        parameters.append(key, value)
+                val response = httpClient.post(baseUrl) {
+                    url {
+                        getQueryParams().forEach { (key, value) ->
+                            parameters.append(key, value)
+                        }
                     }
+                    contentType(getContentType())
+                    setBody(requestBody.toString())
                 }
-                contentType(ContentType.Application.Json)
-                setBody(requestBody.toString())
-            }
 
-            if (response.status == HttpStatusCode.OK) {
-                consoleLogger.log(LogLevel.INFO, tag, "Log successfully sent to $baseUrl")
-            } else {
-                consoleLogger.log(LogLevel.ERROR, tag, "Failed to send log to $baseUrl")
+                if (response.status.value in 200..299) {
+                    consoleLogger.log(LogLevel.INFO, tag, "Log successfully sent to $baseUrl")
+                } else {
+                    consoleLogger.log(LogLevel.ERROR, tag, "Failed to send log to $baseUrl")
+                }
             }
         }
     }
 
-    protected abstract fun getRequestBody(logs: Array<LogData>): Any?
-    protected abstract fun getHeaders(): Map<String, String>
+    protected abstract fun getRequestBody(logs: Array<NetworkLogEntry>): Any
+    protected abstract fun getQueryParams(): Map<String, String>
+    protected abstract fun getContentType(): ContentType
 
 }
