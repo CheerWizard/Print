@@ -13,7 +13,7 @@ plugins {
 }
 
 group = "io.github.cheerwizard"
-version = "1.0.3"
+version = "1.0.4"
 
 kotlin {
     android {
