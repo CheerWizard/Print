@@ -6,4 +6,5 @@ actual fun GlobalExceptionHandler(crashReportFilepath: String, block: (Throwable
         block(throwable)
         previous?.uncaughtException(thread, throwable)
     }
+    NativeExceptionHandler.install(crashReportFilepath)
 }

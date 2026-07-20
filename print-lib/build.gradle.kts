@@ -22,7 +22,7 @@ kotlin {
         minSdk = 26
     }
 
-    jvm("jvm")
+    jvm("desktop")
 
     js {
         browser()
@@ -68,7 +68,7 @@ kotlin {
             }
         }
 
-        val jvmMain by getting {
+        val desktopMain by getting {
             dependsOn(jniMain)
             dependencies {
                 implementation(libs.ktor.client.java)

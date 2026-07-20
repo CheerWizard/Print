@@ -84,7 +84,10 @@ object PrintTests {
                 val exception = exceptions.random()
                 Print.e(tag, message, exception)
             }
-            else -> {}
+            LogLevel.FATAL -> {
+                val exception = exceptions.random()
+                throw exception
+            }
         }
     }
 

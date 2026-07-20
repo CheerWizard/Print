@@ -1,0 +1,10 @@
+20.07.2026 12:07:02 [FATAL] Print: Crash reported!
+ java.lang.NullPointerException
+	at com.cws.print.sandbox.PrintTests.<clinit>(PrintTests.kt:44)
+	at com.cws.print.sandbox.MainKt$main$1$1$1$1.invokeSuspend(Main.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:807)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
