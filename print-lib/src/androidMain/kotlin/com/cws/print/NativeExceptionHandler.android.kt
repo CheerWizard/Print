@@ -1,9 +1,9 @@
 package com.cws.print
 
-actual open class PlatformNativeExceptionHandler actual constructor() {
+actual object JniLibrary {
 
-    protected actual fun init() {
-        System.loadLibrary("native_exception_handler")
+    actual fun load(libraryName: String) {
+        System.loadLibrary(libraryName)
     }
 
 }
