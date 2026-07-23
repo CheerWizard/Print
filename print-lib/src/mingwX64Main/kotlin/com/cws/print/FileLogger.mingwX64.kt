@@ -2,7 +2,7 @@ package com.cws.print
 
 import platform.windows.CreateDirectoryA
 
-internal actual fun makeDirs(path: String) {
+actual fun makeDirs(path: String) {
     val parts = path.split("\\", "/").filter { it.isNotEmpty() }
     var current = ""
     for (part in parts) {

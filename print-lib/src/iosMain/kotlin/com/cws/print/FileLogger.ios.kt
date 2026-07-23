@@ -14,7 +14,7 @@ import platform.posix.mkdir
 import kotlin.time.Duration
 import kotlin.time.Duration.Companion.seconds
 
-internal actual fun makeDirs(path: String) {
+actual fun makeDirs(path: String) {
     val parts = path.split("/").filter { it.isNotEmpty() }
     var current = if (path.startsWith("/")) "/" else ""
     for (part in parts) {

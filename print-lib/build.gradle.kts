@@ -101,7 +101,6 @@ kotlin {
                 implementation(libs.ktor.client.curl)
             }
         }
-
         val mingwX64Main by getting { dependsOn(nativeMain) }
         val linuxX64Main by getting { dependsOn(nativeMain) }
         val macosArm64Main by getting { dependsOn(nativeMain) }
